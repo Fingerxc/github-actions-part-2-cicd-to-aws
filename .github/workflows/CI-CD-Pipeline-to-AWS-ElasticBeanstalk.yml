@@ -15,16 +15,13 @@ on:
 jobs:
   my_ci_part:
     runs-on: ubuntu-latest
-  
-    
+     
     steps:
-    - name: Git clone our repo
-    - uses: actions/checkout@v1
+     - name: Git clone our repo
+     - uses: actions/checkout@v1
     
-    
-    
-    - name: Create ZIP deployment package
-      run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
+     - name: Create ZIP deployment package
+       run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
 
 
 
